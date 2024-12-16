@@ -1,0 +1,124 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Navigation
+    {
+        "key": "space g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space g i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space g r",
+        "command": "editor.action.goToReferences",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space g b",
+        "command": "workbench.action.navigateBack",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space space",
+        "command": "workbench.action.quickOpen",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    // Sidebar
+    {
+        "key": "space b b",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space b x",
+        "command": "workbench.view.extensions",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space b e",
+        "command": "workbench.view.explorer",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space b g",
+        "command": "workbench.view.scm",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space b t",
+        "command": "workbench.view.testing.focus",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space b r",
+        "command": "workbench.view.debug",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space b d",
+        "command": "dockerContainers.focus",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    // Panel
+    {
+        "key": "space p p",
+        "command": "workbench.action.togglePanel",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    // Commands
+    {
+        "key": "space c c",
+        "command": "workbench.action.showCommands",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    // Debugging
+    {
+        "key": "space d s",
+        "command": "workbench.action.debug.selectandstart",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closeSidebar",
+        "when": "sideBarFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closePanel",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "postman-for-vscode.sidebar-panel.focus"
+    },
+    // Unit tests
+    {
+        "key": "space u c",
+        "command": "testing.coverageAtCursor",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space u a",
+        "command": "testing.coverageAll",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    // Tabs
+    {
+        "key": "space t t",
+        "command": "workbench.action.showMultipleEditorTabs",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress' && !editorTabsVisible"
+    },
+    {
+        "key": "space t t",
+        "command": "workbench.action.hideEditorTabs",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress' && editorTabsVisible"
+    },
+    {
+        "key": "space t s",
+        "command": "workbench.action.showAllEditors",
+        "when": "editorFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    }
+]

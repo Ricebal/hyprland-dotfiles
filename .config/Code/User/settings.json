@@ -1,0 +1,61 @@
+{
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.fontFamily": "'Mononoki Nerd Font', monospace",
+    "terminal.integrated.fontFamily": "monospace",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorCustomizations": {
+        "terminal.background": "#00000000"
+    },
+    "workbench.settings.applyToAllProfiles": [
+        "workbench.colorCustomizations"
+    ],
+    "editor.semanticTokenColorCustomizations": {
+        "[functional-purple]": {
+            "enabled": true,
+            "rules": {
+                "class": "#f832c7"
+            }
+        },
+        "[City Lights]": {
+            "enabled": true,
+            "rules": {
+                "class": "#0099ff",
+                "keyword": "#9962ff",
+                "parameter": "#e9a1ff"
+            }
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "[Dark Green Jungle]": {
+            "types": "#6c9659b6",
+            "functions": "#ddb467",
+            "variables": "#6cad16"
+        },
+        "[Dark Magic Frankenstein]": {
+            "types": "#679218"
+        },
+        "[functional-purple]": {
+            "types": "#fc87df",
+            "variables": "#ffffff",
+            "functions": "#60aee2"
+        },
+        "[City Lights]": {
+            "variables": "#ffffff",
+            "types": "#6ec5ff"
+        }
+    },
+    "editor.lineNumbers": "relative",
+    "workbench.startupEditor": "none",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.newWindowProfile": "Default",
+    "window.menuBarVisibility": "toggle",
+    "editor.minimap.enabled": false,
+    "window.commandCenter": false,
+    "workbench.colorTheme": "City Lights",
+    "workbench.activityBar.location": "hidden",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "githubPullRequests.pullBranch": "never",
+    "workbench.editor.showTabs": "none"
+}
