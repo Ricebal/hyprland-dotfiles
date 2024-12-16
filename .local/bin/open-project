@@ -1,0 +1,6 @@
+#!/bin/sh
+# CONSTS
+GIT_DIRECTORY="$HOME/git"
+
+chosen_directory=$(ls "$GIT_DIRECTORY" | wofi -d)
+[[ ! -z "$chosen_directory" ]] && code "$GIT_DIRECTORY/$chosen_directory/"
