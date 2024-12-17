@@ -1,6 +1,0 @@
-#!/bin/sh
-# CONSTS
-SCRIPTS_DIRECTORY="$HOME/.local/bin"
-
-chosen_file=$(find $SCRIPTS_DIRECTORY -type f | fzf --preview='bat --color=always {}')
-[[ ! -z "$chosen_file" ]] && nvim $chosen_file

@@ -1,6 +1,6 @@
 #!/bin/sh
 # CONSTS
-CONFIG_DIRECTORY="$HOME/.config"
+CONFIG_DIRECTORY="$HOME/dotfiles"
 
 chosen_file=$(find $CONFIG_DIRECTORY -type f | fzf --preview='bat --color=always {}')
 [[ ! -z "$chosen_file" ]] && nvim $chosen_file
