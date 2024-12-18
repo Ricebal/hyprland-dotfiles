@@ -26,6 +26,17 @@
         "command": "workbench.action.quickOpen",
         "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
     },
+    // Git
+    {
+        "key": "space v c",
+        "command": "git.checkout",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space v p",
+        "command": "git.pull",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
     // Sidebar
     {
         "key": "space b b",
