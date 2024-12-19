@@ -116,6 +116,11 @@
         "command": "testing.coverageAll",
         "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
     },
+    {
+        "key": "space u d",
+        "command": "testing.debugAtCursor",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
     // Tabs
     {
         "key": "space t t",
