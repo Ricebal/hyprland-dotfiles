@@ -30,4 +30,5 @@ fi
 
 
 EDITOR=nvim
+alias ll='ls -la --color'
 alias fcd='cd $(find -type d | fzf)'
