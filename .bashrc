@@ -24,5 +24,10 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+if ! [ -f $HOME/.config/hypr/hyprland/hostname.conf ]; then
+  echo "\$hostname = $(uname -n)" > $HOME/.config/hypr/hyprland/hostname.conf
+fi
+
+
 EDITOR=nvim
 alias fcd='cd $(find -type d | fzf)'
