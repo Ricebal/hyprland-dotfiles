@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# TODO: Fix sudo priv
+# CONST
+MOUNTPOINT_DIR="/run/media/$(whoami)"
+
+# Functions
+function mount_disk() {
+  available_disks=$(lsblk -lp | awk '$6 == "part" {if (d) print d; d=$1" ("$4")"} {if ($7) d=""} END {if (d) print d""}')
+  [[ $available_disks = "" ]] && notify-send -t 5000 "Select Mount Disk" "No disks available" && exit 1
+  chosen=$(echo -e $available_disks | sed -E 's/\) /)\n/g' | wofi -d -p "Select disk to mount" | awk '{ print $1 }')
+  [[ $chosen = "" ]] && exit 1
+  available_dirs="$(ls $MOUNTPOINT_DIR)"
+  chosen_dir=$(echo $available_dirs | tr ' ' '\n' | wofi -d -i -p "Choose a directory")
+  [[ $chosen_dir = "" ]] && notify-send -t 5000 "Select Mount Disk" "Invalid mountpoint" && exit 1
+  mount_path="$MOUNTPOINT_DIR/$chosen_dir"
+  if [[ ! -d "$mount_path" ]]; then
+    mkdir_prompt=$(echo -e "No\nYes" | wofi -d -p "Directory doesn't exist, create it?")
+    [[ "$mkdir_prompt" = "Yes" ]] && sudo mkdir -p $mount_path
+  fi
+  sudo mount $chosen $mount_path && notify-send -t 5000 "Select Mount Disk" "$chosen mounted on $mount_path" && exit 0
+}
+
+function unmount_disk() {
+  available_disks=$(lsblk -lp | grep "$MOUNTPOINT_DIR" | awk '{ print $1" on "$7 }')
+  [[ $available_disks = "" ]] && notify-send -t 5000 "Select Mount Disk" "No mounted disks" && exit 1
+  chosen=$(echo -e $available_disks | sed -E 's/\) /)\n/g' | wofi -d -p "Select disk to unmount")
+  [[ $chosen = "" ]] && exit 1
+  chosen_disk=echo $chosen | awk '{ print $1 }'
+  sudo umount $chosen_disk && notify-send -t 5000 "Select Mount Disk" "Unmounted $chosen" && exit 0
+}
+
+# Entrypoint
+selection="$(echo -e "mount\nunmount" | wofi -d -p "Select action")"
+
+case $selection in
+  mount) mount_disk ;;
+  unmount) unmount_disk ;;
+  *) notify-send -t 5000 "Select Mount Disk" "Unsupported action" && exit 1 ;;
+esac
