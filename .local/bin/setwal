@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cp $1 ~/.config/wallpaper/image
+wal -i $1
+killall hyprpaper
+hyprctl dispatch exec hyprpaper

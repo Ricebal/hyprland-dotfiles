@@ -1,14 +1,16 @@
+@import url("/home/nic/.cache/wal/waybar-colors.css");
+
 * {
     border: none;
     border-radius: 0;
-    font-family: "Ubuntu Nerd Font";
-    font-size: 13px;
+    font-family: "Mononoki Nerd Font";
+    font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
-    color: white;
+    background: alpha(@color0, 0.4);
+    color: @color15;
 }
 
 #window {
@@ -39,7 +41,7 @@ window#waybar {
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
-    padding: 0 10;
+    padding: 0 10px;
     margin: 0 2px;
 }
 
