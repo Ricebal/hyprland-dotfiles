@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# CONSTS
+HOST_NAME_DIR="$HOME/.cache/hostname"
+
+# Hyprland (and ecosystem)
+HYPR_FILE_NAME="hypr.conf"
+HYPR_PATH="$HOST_NAME_DIR/$HYPR_FILE_NAME"
+
+if [[ ! -d $HOST_NAME_DIR ]]; then
+  mkdir -p $HOST_NAME_DIR
+fi
+
+if [[ ! -f $HYPR_PATH ]]; then
+  echo "\$hostname = $HOSTNAME" > $HYPR_PATH
+fi
+
+notify-send "$HOSTNAME"
+
