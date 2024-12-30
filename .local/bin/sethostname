@@ -15,5 +15,3 @@ if [[ ! -f $HYPR_PATH ]]; then
   echo "\$hostname = $HOSTNAME" > $HYPR_PATH
 fi
 
-notify-send "$HOSTNAME"
-
