@@ -26,7 +26,7 @@ function unmount_disk() {
   [[ $available_disks = "" ]] && notify-send -t 5000 "Select Mount Disk" "No mounted disks" && exit 1
   chosen=$(echo -e $available_disks | sed -E 's/\) /)\n/g' | wofi -d -p "Select disk to unmount")
   [[ $chosen = "" ]] && exit 1
-  chosen_disk=echo $chosen | awk '{ print $1 }'
+  chosen_disk=$(echo "$chosen" | awk '{ print $1 }')
   sudo umount $chosen_disk && notify-send -t 5000 "Select Mount Disk" "Unmounted $chosen" && exit 0
 }
 
