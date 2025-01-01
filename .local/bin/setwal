@@ -1,6 +1,6 @@
 #!/bin/sh
 
 cp $1 ~/.config/wallpaper/image
-wal -i $1
+wal --saturate 0.5 -i $1
 killall hyprpaper
 hyprctl dispatch exec hyprpaper
