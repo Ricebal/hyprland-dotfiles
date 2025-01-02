@@ -1,0 +1,21 @@
+[global]
+  corner_radius = 15
+  follow = mouse
+  padding = 8
+  horizontal_padding = 8
+  font = Mononoki Nerd 11
+  alignment = left 
+  vertical_alignment = center
+  sort = yes
+  frame_color = "#4287f5" 
+  frame_width = 2 
+
+[urgency_normal]
+  background = "#202632"
+  foreground = "#ffffff"
+  timeout = 5
+
+[urgency_critical]
+  background = "#ffffff"
+  foreground = "#db0101"
+  timeout = 0
