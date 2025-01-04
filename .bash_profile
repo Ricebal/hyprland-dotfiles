@@ -5,3 +5,4 @@
 [[ -f ~/.local/bin/sethostname ]] && ~/.local/bin/sethostname
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+. "$HOME/.cargo/env"

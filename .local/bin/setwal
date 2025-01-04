@@ -4,3 +4,4 @@ cp $1 ~/.config/wallpaper/image
 wal --saturate 0.5 -i $1
 killall hyprpaper
 hyprctl dispatch exec hyprpaper
+notify-send -t 5000 "Setwal" "Setting wallpaper to $1"

@@ -24,6 +24,7 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-EDITOR=nvim
+export EDITOR=nvim
 alias ll='ls -la --color'
 alias fcd='cd $(find -type d | fzf)'
+. "$HOME/.cargo/env"
