@@ -14,6 +14,15 @@ hyprland hyprlock hyprpaper wlogout kitty waybar wofi python-pywal
 visual-studio-code neovim ranger imv dolphin
 ```
 
+#### Yazi
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+```
+```bash
+cargo install --locked yazi-fm yazi-cli
+```
+
 ## Extra information
 Runs host specific configuration by having directories based on host name.
 Might not work if pywal hasn't been run at least once.
