@@ -11,7 +11,7 @@ hyprland hyprlock hyprpaper wlogout kitty waybar wofi python-pywal
 
 ### Optional
 ```
-visual-studio-code neovim ranger imv dolphin
+visual-studio-code neovim imv dolphin
 ```
 
 #### Yazi
