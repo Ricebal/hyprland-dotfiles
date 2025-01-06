@@ -53,7 +53,7 @@ s = scaling next
 <Shift+S> = upscaling next
 a = zoom actual
 r = reset
-pw = exec ~/.local/bin/setwal $imv_current_file
+pw = exec ~/.local/scripts/setwal $imv_current_file
 
 # Gif playback
 <period> = next_frame

@@ -2,7 +2,7 @@
 # ~/.bash_profile
 #
 
-[[ -f ~/.local/bin/sethostname ]] && ~/.local/bin/sethostname
+[[ -f ~/.local/scripts/sethostname ]] && ~/.local/scripts/sethostname
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 . "$HOME/.cargo/env"
