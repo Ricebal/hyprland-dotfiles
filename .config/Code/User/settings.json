@@ -53,8 +53,9 @@
     "window.menuBarVisibility": "toggle",
     "editor.minimap.enabled": false,
     "window.commandCenter": false,
-    "workbench.colorTheme": "City Lights",
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
     "workbench.activityBar.location": "hidden",
     "diffEditor.hideUnchangedRegions.enabled": true,
-    "githubPullRequests.pullBranch": "never"
+    "githubPullRequests.pullBranch": "never",
+    "workbench.editor.showTabs": "none"
 }
