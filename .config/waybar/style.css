@@ -1,4 +1,4 @@
-@import url("/home/nic/.cache/wal/waybar-colors.css");
+@import url("../../.cache/wal/colors-waybar.css"); /* Expecting this file to live in ~/.config/waybar/ */
 
 * {
     border: none;
