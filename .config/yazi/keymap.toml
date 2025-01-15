@@ -73,6 +73,7 @@ keymap = [
 	{ on = ["y","u"],   run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = ["d","u"],   run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = ["d","D"],   run = "remove --permanently",        desc = "Permanently delete selected files" },
+	{ on = ["d","s"],   run = "shell 'shred -fuz $@'",        desc = "Permanently shred selected files" },
 	{ on = "a",         run = "create",                      desc = "Create a file (ends with / for directories)" },
 	{ on = "r",         run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" },
 	{ on = ";",         run = "shell --interactive",         desc = "Run a shell command" },
