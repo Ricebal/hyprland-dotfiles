@@ -50,12 +50,12 @@
     "workbench.startupEditor": "none",
     "diffEditor.ignoreTrimWhitespace": false,
     "window.newWindowProfile": "Default",
-    "window.menuBarVisibility": "toggle",
     "editor.minimap.enabled": false,
     "window.commandCenter": false,
     "workbench.colorTheme": "Visual Studio 2019 Dark",
-    "workbench.activityBar.location": "hidden",
+    "workbench.activityBar.location": "top",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "githubPullRequests.pullBranch": "never",
-    "workbench.editor.showTabs": "none"
+    "workbench.editor.showTabs": "none",
+    "window.menuBarVisibility": "toggle"
 }
