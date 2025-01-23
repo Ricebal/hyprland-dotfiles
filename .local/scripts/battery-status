@@ -1,0 +1,26 @@
+#!/bin/sh
+        #"format-icons": ["", "", "", "", ""]
+BATTERY_LEVEL=$(cat /sys/class/power_supply/BAT0/capacity)
+BATTERY_STATUS=$(cat /sys/class/power_supply/BAT0/status)
+
+if [[ $BATTERY_LEVEL -ge 80 ]]; then
+  battery_icon=""
+fi
+
+if [[ $BATTERY_LEVEL -ge 60 ]] && [[ $BATTERY_LEVEL -le 79 ]]; then
+  battery_icon=""
+fi
+
+if [[ $BATTERY_LEVEL -ge 40 ]] && [[ $BATTERY_LEVEL -le 59 ]]; then
+  battery_icon=""
+fi
+
+if [[ $BATTERY_LEVEL -ge 20 ]] && [[ $BATTERY_LEVEL -le 39 ]]; then
+  battery_icon=""
+fi
+
+if [[ $BATTERY_LEVEL -ge 0 ]] && [[ $BATTERY_LEVEL -le 19 ]]; then
+  battery_icon=""
+fi
+
+echo "$battery_icon   $BATTERY_LEVEL%, $BATTERY_STATUS"
