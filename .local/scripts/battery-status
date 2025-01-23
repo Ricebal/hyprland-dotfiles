@@ -1,5 +1,6 @@
 #!/bin/sh
-        #"format-icons": ["", "", "", "", ""]
+# ["", "", "", "", ""]
+[[ ! -f /sys/class/power_supply/BAT0/capacity ]] && exit 1
 BATTERY_LEVEL=$(cat /sys/class/power_supply/BAT0/capacity)
 BATTERY_STATUS=$(cat /sys/class/power_supply/BAT0/status)
 
