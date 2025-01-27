@@ -26,6 +26,16 @@
         "command": "workbench.action.quickOpen",
         "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
     },
+    {
+        "key": "ctrl-n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "(editorTextFocus || !inputFocus) && (vim.mode == 'Normal' || vim.mode == 'Visual') && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space w w",
+        "command": "editor.action.toggleWordWrap",
+        "when": "(editorTextFocus || !inputFocus) && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
     // Git
     {
         "key": "space v c",
