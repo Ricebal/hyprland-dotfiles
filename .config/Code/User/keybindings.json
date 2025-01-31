@@ -102,6 +102,11 @@
         "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
     },
     {
+        "key": "space d q",
+        "command": "workbench.action.debug.stop",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
         "key": "escape",
         "command": "workbench.action.closeSidebar",
         "when": "sideBarFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
