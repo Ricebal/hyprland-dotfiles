@@ -36,6 +36,11 @@
         "command": "editor.action.toggleWordWrap",
         "when": "(editorTextFocus || !inputFocus) && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
     },
+    {
+        "key": "space r r",
+        "command": "editor.action.rename",
+        "when": "(editorTextFocus || !inputFocus) && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
     // Git
     {
         "key": "space v c",

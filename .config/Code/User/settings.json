@@ -56,6 +56,6 @@
     "workbench.activityBar.location": "top",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "githubPullRequests.pullBranch": "never",
-    "workbench.editor.showTabs": "none",
-    "window.menuBarVisibility": "toggle"
+    "window.menuBarVisibility": "toggle",
+    "workbench.editor.showTabs": "none"
 }
