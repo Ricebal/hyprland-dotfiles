@@ -41,6 +41,11 @@
         "command": "editor.action.rename",
         "when": "(editorTextFocus || !inputFocus) && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
     },
+    {
+        "key": "space g e",
+        "command": "editor.action.marker.next",
+        "when": "(editorTextFocus || !inputFocus) && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
     // Git
     {
         "key": "space v c",
