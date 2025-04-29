@@ -90,7 +90,7 @@
     },
     {
         "key": "space b d",
-        "command": "dockerContainers.focus",
+        "command": "workbench.view.extension.containersView",
         "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
     },
     // Panel
@@ -114,6 +114,17 @@
     {
         "key": "space d q",
         "command": "workbench.action.debug.stop",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    // Containers
+    {
+        "key": "space c s",
+        "command": "vscode-containers.containers.composeGroup.start",
+        "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
+    },
+    {
+        "key": "space c c",
+        "command": "vscode-containers.containers.composeGroup.stop",
         "when": "editorTextFocus && vim.mode != 'Insert' && vim.mode != 'CommandlineInProgress'"
     },
     {
