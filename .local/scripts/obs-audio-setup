@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Setup audio sink
+pactl load-module module-null-sink media.class=Audio/Sink sink_name=obs-combined-sink channel_map=stereo
+
+# Start graph
+qpwgraph &
