@@ -52,12 +52,28 @@
     "window.newWindowProfile": "Default",
     "editor.minimap.enabled": false,
     "window.commandCenter": false,
-    "workbench.colorTheme": "Visual Studio 2019 Dark",
     "workbench.activityBar.location": "top",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "githubPullRequests.pullBranch": "never",
     "window.menuBarVisibility": "toggle",
     "workbench.editor.editorActionsLocation": "hidden",
     "window.customTitleBarVisibility": "never",
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "/tmp/postman-http-request-post-response.instructions.md": true,
+        "/tmp/postman-http-request-pre-request.instructions.md": true,
+        "/tmp/postman-collections-post-response.instructions.md": true,
+        "/tmp/postman-collections-pre-request.instructions.md": true,
+        "/tmp/postman-folder-post-response.instructions.md": true,
+        "/tmp/postman-folder-pre-request.instructions.md": true
+    },
+    "remote.autoForwardPortsSource": "hybrid",
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "dev.containers.defaultExtensions": [
+        "eamodio.gitlens",
+        "GitHub.copilot"
+    ],
     "workbench.editor.showTabs": "none"
 }
