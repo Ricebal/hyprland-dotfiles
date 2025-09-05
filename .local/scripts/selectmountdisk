@@ -6,7 +6,7 @@ MOUNTPOINT_DIR="/run/media/$(whoami)"
 
 # Functions
 function mount_disk() {
-  available_disks=$(lsblk -lp | awk '$6 == "part" {if (d) print d; d=$1" ("$4")"} {if ($7) d=""} END {if (d) print d""}')
+  available_disks=$(lsblk -lp | awk '{ if ($6 == "part" && !$7) print $1 " (" $4 ")" }')
   [[ $available_disks = "" ]] && notify-send -t 5000 "Select Mount Disk" "No disks available" && exit 1
   chosen=$(echo -e $available_disks | sed -E 's/\) /)\n/g' | wofi -d -p "Select disk to mount" | awk '{ print $1 }')
   [[ $chosen = "" ]] && exit 1
