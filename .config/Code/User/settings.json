@@ -75,5 +75,17 @@
         "eamodio.gitlens",
         "GitHub.copilot"
     ],
-    "workbench.editor.showTabs": "none"
+    "workbench.editor.showTabs": "none",
+    "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
+    "csharp.inlayHints.enableInlayHintsForImplicitVariableTypes": true,
+    "csharp.inlayHints.enableInlayHintsForLambdaParameterTypes": true,
+    "csharp.inlayHints.enableInlayHintsForTypes": true,
+    "dotnet.inlayHints.enableInlayHintsForIndexerParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForLiteralParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForObjectCreationParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForOtherParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForParameters": true,
+    "dotnet.inlayHints.suppressInlayHintsForParametersThatDifferOnlyBySuffix": true,
+    "dotnet.inlayHints.suppressInlayHintsForParametersThatMatchArgumentName": true,
+    "dotnet.inlayHints.suppressInlayHintsForParametersThatMatchMethodIntent": true
 }
