@@ -3,6 +3,7 @@
 # TODO: Fix sudo priv
 # CONST
 MOUNTPOINT_DIR="/run/media/$(whoami)"
+CONFIG_PATH="$HOME/.config/selectmountdisk/config"
 
 # Functions
 function mount_disk() {
@@ -10,8 +11,9 @@ function mount_disk() {
   [[ $available_disks = "" ]] && notify-send -t 5000 "Select Mount Disk" "No disks available" && exit 1
   chosen=$(echo -e $available_disks | sed -E 's/\) /)\n/g' | wofi -d -p "Select disk to mount" | awk '{ print $1 }')
   [[ $chosen = "" ]] && exit 1
-  available_dirs="$(ls $MOUNTPOINT_DIR)"
-  chosen_dir=$(echo $available_dirs | tr ' ' '\n' | wofi -d -i -p "Choose a directory")
+  load_config
+  available_dirs="${PRESET_NAMES} $(ls $MOUNTPOINT_DIR)"
+  chosen_dir=$(echo $available_dirs | tr ' ' '\n' | uniq | wofi -d -i -p "Choose a directory")
   [[ $chosen_dir = "" ]] && notify-send -t 5000 "Select Mount Disk" "Invalid mountpoint" && exit 1
   mount_path="$MOUNTPOINT_DIR/$chosen_dir"
   if [[ ! -d "$mount_path" ]]; then
@@ -28,6 +30,12 @@ function unmount_disk() {
   [[ $chosen = "" ]] && exit 1
   chosen_disk=$(echo "$chosen" | awk '{ print $1 }')
   sudo umount $chosen_disk && notify-send -t 5000 "Select Mount Disk" "Unmounted $chosen" && exit 0
+}
+
+function load_config() {
+  if [ -f "$CONFIG_PATH" ]; then
+    set -o allexport; source $CONFIG_PATH; set +o allexport;
+  fi
 }
 
 # Entrypoint
