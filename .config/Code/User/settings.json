@@ -75,7 +75,6 @@
         "eamodio.gitlens",
         "GitHub.copilot"
     ],
-    "workbench.editor.showTabs": "none",
     "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
     "csharp.inlayHints.enableInlayHintsForImplicitVariableTypes": true,
     "csharp.inlayHints.enableInlayHintsForLambdaParameterTypes": true,
@@ -188,8 +187,11 @@
         "xargs": false,
         "eval": false,
         "Invoke-Expression": false,
-        "iex": false
+        "iex": false,
+        "sed": true,
+        "dotnet build": true
     },
     "gitlens.ai.model": "vscode",
-    "gitlens.ai.vscode.model": "copilot:gpt-4.1"
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "workbench.editor.showTabs": "none"
 }
