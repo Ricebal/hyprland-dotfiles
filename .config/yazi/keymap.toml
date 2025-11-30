@@ -67,6 +67,7 @@ keymap = [
 	{ on = ["d","d"],   run = "yank --cut",                  desc = "Yank selected files (cut)" },
 	{ on = ["p","p"],   run = "paste",                       desc = "Paste yanked files" },
 	{ on = ["p","f"],   run = "paste --force",               desc = "Paste yanked files (overwrite if the destination exists)" },
+  { on = ["p","y"],   run = "shell 'wl-paste | yt-dlp -a -'", desc = "Download yt-dlp from clipboard" },
 	{ on = "-",         run = "link",                        desc = "Symlink the absolute path of yanked files" },
 	{ on = "_",         run = "link --relative",             desc = "Symlink the relative path of yanked files" },
 	{ on = "<C-->",     run = "hardlink",                    desc = "Hardlink yanked files" },
