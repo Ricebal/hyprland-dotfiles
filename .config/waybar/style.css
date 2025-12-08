@@ -98,6 +98,10 @@ window#waybar {
     color: rgb(102, 220, 105);
 }
 
+#custom-tidal {
+    color: rgb(0, 200, 255);
+}
+
 #tray {
 }
 

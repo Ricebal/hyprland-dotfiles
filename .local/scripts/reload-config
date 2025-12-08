@@ -1,4 +1,6 @@
 #!/bin/bash
 
 hyprctl reload &&
+pkill waybar &&
+hyprctl dispatch exec waybar &&
 notify-send -t 1000 "Config" "Reload complete."
