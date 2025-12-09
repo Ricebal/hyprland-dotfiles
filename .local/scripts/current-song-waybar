@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ORIGINAL_SCRIPT=$HOME/.local/scripts/current-song
+
+$ORIGINAL_SCRIPT | sed 's/&/&amp;/g'
