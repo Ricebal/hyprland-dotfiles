@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Select current branch
+local_branch=$(git branch --format='%(refname:short)' | fzf --prompt "Select a local branch: ")
+
+remote_branch=$(git ls-remote --heads origin | cut -f 2 | sed 's|^refs/heads/|origin/|' | fzf --prompt "Select a remote branch to compare to: ")
+
+file_to_compare=$(find . -type f | fzf --prompt "Select a file to compare: ")
+
+git diff $remote_branch $local_branch -- $file_to_compare
