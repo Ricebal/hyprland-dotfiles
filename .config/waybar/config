@@ -75,14 +75,14 @@
         "on-click": "pavucontrol"
     },
     "custom/tidal": {
-        "format": "󰎆{}",
+        "format": " 󰎆 {}",
         "max-length": 40,
         "interval": 30, // Remove this if your script is endless and write in loop
         "exec": "$HOME/.local/scripts/current-song-waybar 2> /dev/null", // Script in resources folder
         "exec-if": "pgrep tidal-hifi"
     },
     "custom/spotify": {
-        "format": " {}",
+        "format": "  {}",
         "max-length": 40,
         "interval": 30, // Remove this if your script is endless and write in loop
         "exec": "$HOME/.local/scripts/current-song-waybar 2> /dev/null", // Script in resources folder

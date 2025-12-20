@@ -3,7 +3,7 @@ player_status=$(playerctl status 2> /dev/null)
 song_info="$(playerctl metadata artist) - $(playerctl metadata title)" 2> /dev/null
 echo $song_info > $HOME/.cache/current_song.txt 2> /dev/null
 if [ "$player_status" = "Playing" ]; then
-    echo " ${song_info}"
+    echo "${song_info}"
 elif [ "$player_status" = "Paused" ]; then
-    echo "  ${song_info}"
+    echo " ${song_info}"
 fi

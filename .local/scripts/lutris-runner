@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Check lutris
+which lutris > /dev/null || (notify-send -t 5000 "lutris-runner" "Lutris not installed" && exit 1)
+
+# list games
+installed_games=$(lutris -lo)
+
+chosen_game=$(echo "$installed_games" | awk -F'|' '{print $2}' | wofi -d -p "Select game to run")
+
+if [ ! -z "$chosen_game" ]; then
+  game_id=$(echo "$installed_games" | awk -v chosen_game="$chosen_game" -F'|' '{if ($2 == chosen_game) print $1}' | awk '{$1=$1;print}')
+  lutris lutris:rungameid/${game_id}
+fi
