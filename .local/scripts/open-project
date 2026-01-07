@@ -2,5 +2,8 @@
 # CONSTS
 GIT_DIRECTORY="$HOME/git"
 
-chosen_directory=$(ls "$GIT_DIRECTORY" | wofi -d)
-[[ ! -z "$chosen_directory" ]] && code "$GIT_DIRECTORY/$chosen_directory/"
+chosen_directory=$(ls "$GIT_DIRECTORY" | wofi -d -i -M fuzzy -p "Select project to open")
+[[ $chosen_directory = "" ]] && exit 0
+[[ ! -d "$GIT_DIRECTORY/$chosen_directory" ]] && notify-send -t 5000 "Open Project" "Not a valid directory" && exit 1
+
+code "$GIT_DIRECTORY/$chosen_directory/"
