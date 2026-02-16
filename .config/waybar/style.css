@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background: alpha(@color0, 0.4);
+    background: alpha(@color0, 0.8);
     color: @color15;
 }
 
@@ -100,6 +100,10 @@ window#waybar {
 
 #custom-tidal {
     color: rgb(0, 200, 255);
+}
+
+#custom-deezer {
+    color: rgb(187, 115, 255);
 }
 
 #tray {
