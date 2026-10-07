@@ -1,0 +1,146 @@
+return {
+    applications = {
+        terminal = "kitty",
+        lock = "hyprlock",
+        file_manager = "kitty yazi",
+        menu = "wofi --show drun",
+        screenshot = 'grim -g "$(slurp)" - | wl-copy',
+        volume = "pavucontrol",
+    },
+    autostart_once = {
+        "waybar",
+        "hyprpaper",
+        "nm-applet",
+        'gsettings set org.gnome.desktop.interface gtk-theme "Breeze-Dark"',
+        'gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"',
+        'gsettings set org.gnome.desktop.interface cursor-theme "Breeze-Dark"',
+    },
+    autostart = {
+        "~/.local/scripts/restart-waybar",
+        "~/.local/scripts/restart-hyprpaper",
+        'gsettings set org.gnome.desktop.interface gtk-theme "Breeze-Dark"',
+        'gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"',
+        'gsettings set org.gnome.desktop.interface cursor-theme "Breeze-Dark"',
+    },
+    environment = {
+        { "XCURSOR_SIZE", "24" },
+        { "HYPRCURSOR_SIZE", "24" },
+        { "XDG_CURRENT_DESKTOP", "Hyprland" },
+        { "XDG_SESSION_TYPE", "wayland" },
+        { "XDG_SESSION_DESKTOP", "Hyprland" },
+        { "GDK_SCALE", "1" },
+        { "GKD_BACKEND", "wayland,x11,*" },
+        { "QT_AUTO_SCREEN_SCALE_FACTOR", "1" },
+        { "QT_QPA_PLATFORM", "wayland;xcb" },
+        { "QT_WAYLAND_DISABLE_WINDOWDECORATION", "1" },
+        { "QT_QPA_PLATFORMTHEME", "qt6ct" },
+    },
+    options = {
+        general = {
+            gaps_in = 5,
+            gaps_out = 10,
+            border_size = 2,
+            resize_on_border = false,
+            allow_tearing = false,
+            layout = "master",
+        },
+        decoration = {
+            rounding = 5,
+            active_opacity = 1.0,
+            inactive_opacity = 1.0,
+            blur = {
+                enabled = true,
+                size = 1,
+                passes = 2,
+                vibrancy = 0.1696,
+            },
+        },
+        animations = {
+            enabled = true,
+        },
+        master = {
+            new_status = "slave",
+            mfact = 0.5,
+        },
+        misc = {
+            middle_click_paste = false,
+            force_default_wallpaper = 1,
+            disable_hyprland_logo = true,
+        },
+        input = {
+            kb_layout = "us",
+            kb_variant = "",
+            kb_model = "",
+            kb_options = "",
+            kb_rules = "",
+            follow_mouse = 2,
+            touchpad = {
+                natural_scroll = true,
+            },
+        },
+        cursor = {
+            no_warps = true,
+        },
+    },
+    window_rules = {
+        {
+            name = "Krita",
+            match = { class = "^krita$", title = "^Krita$" },
+            float = true,
+            no_focus = true,
+        },
+        {
+            name = "World of Warcraft",
+            match = { class = "wow.exe" },
+            sync_fullscreen = true,
+            no_max_size = true,
+            fullscreen = true,
+        },
+        {
+            name = "Runelite",
+            match = {
+                initial_class = "^(net-runelite-client-RuneLite)$",
+                initial_title = "(win\\d+)",
+            },
+            float = true,
+            no_focus = true,
+        },
+        {
+            name = "Ignore maximize requests from apps",
+            match = { class = ".*" },
+            suppress_event = "maximize",
+        },
+        {
+            name = "Fix dragging issues with XWayland",
+            match = {
+                class = "^$",
+                title = "^$",
+                float = true,
+                fullscreen = false,
+                pin = false,
+                xwayland = true,
+            },
+            no_focus = true,
+        },
+        {
+            name = "VSCode",
+            match = { class = "Code" },
+            opacity = "0.9 0.9 1",
+        },
+        {
+            name = "Spotify",
+            match = { class = "Spotify" },
+            opacity = "0.9 0.9 1",
+        },
+    },
+    layer_rules = {
+        {
+            name = "Blur waybar",
+            match = { namespace = "waybar" },
+            blur = true,
+        },
+    },
+    workspace_rules = {},
+    monitors = {},
+    devices = {},
+}
