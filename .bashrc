@@ -27,7 +27,7 @@ unset rc
 export EDITOR=nvim
 alias ll='ls -la --color'
 alias fcd='cd $(find -type d | fzf)'
-. "$HOME/.cargo/env"
+[[ -f $HOME/.cargo/env ]] && . "$HOME/.cargo/env"
 
 # opencode
 export PATH=/home/nmohrmann/.opencode/bin:$PATH

@@ -7,7 +7,7 @@ Version=202
 ViewPropsTimestamp=2024,12,22,2,1,42.725
 
 [IconsMode]
-PreviewSize=80
+PreviewSize=256
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -17,7 +17,10 @@ Places Icons Static Size=22
 MenuBar=Disabled
 
 [PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,avif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,gdk-pixbuf-thumbnailer
+Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,glycin-svg,svgthumbnail,ffmpegthumbs
+
+[Search]
+Location=Everywhere
 
 [UiSettings]
 ColorScheme=Fluent-Dark
