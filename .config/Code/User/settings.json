@@ -60,6 +60,9 @@
     "window.customTitleBarVisibility": "never",
     "chat.instructionsFilesLocations": {
         ".github/instructions": true,
+        ".claude/rules": true,
+        "~/.copilot/instructions": true,
+        "~/.claude/rules": true,
         "/tmp/postman-http-request-post-response.instructions.md": true,
         "/tmp/postman-http-request-pre-request.instructions.md": true,
         "/tmp/postman-collections-post-response.instructions.md": true,
@@ -191,7 +194,20 @@
         "sed": true,
         "dotnet build": true
     },
-    "gitlens.ai.model": "vscode",
-    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-    "workbench.editor.showTabs": "none"
+    "workbench.editor.showTabs": "none",
+    "kafka.clusters": [
+        {
+            "id": "Localhost9092-bG9jYWxob3N0OjkwOTI",
+            "name": "Localhost",
+            "bootstrap": "localhost:9094",
+            "saslOption": {
+                "mechanism": "none",
+                "username": "",
+                "password": ""
+            },
+            "ssl": false
+        }
+    ],
+    "redhat.telemetry.enabled": true,
+    "chat.viewSessions.orientation": "stacked"
 }
